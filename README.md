@@ -27,7 +27,7 @@ the main code is located in the src folder - competition1.cpp
 dataset running with NuScenes map and bag file 2
 
 # Configurations 
-put the bag file into the config folder
+put the bag file into the config folder.
 locate the .launch file competition1.launch inside the launch folder. In line 8, you may set the desired path for the itri_map.pcd file:
 ```launch
 <param name="file" type="str" value="/home/alex/catkin_ws/src/midterm_competition2/src/downsampled.pcd" />
@@ -53,7 +53,7 @@ the main code is located in the src folder - competition2.cpp
 dataset running with NuScenes map and bag file 3
 
 # Configurations 
-put the bag file into the config folder
+put the bag file into the config folder.
 locate the .launch file competition1.launch inside the launch folder. In line 8, you may set the desired path for the itri_map.pcd file:
 ```launch
 <param name="file" type="str" value="/home/alex/catkin_ws/src/midterm_competition3/src/downsampled.pcd" />
