@@ -1,0 +1,11 @@
+<launch>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find midterm_competition3)/config/competition3.rviz"/>
+
+  <node name="competition3" pkg="midterm_competition3" type="competition3" output="screen"/>
+
+  <arg name="node_start_delay" default="20.0" />  
+  <param name="file" type="str" value="/home/alex/catkin_ws/src/midterm_competition3/src/downsampled.pcd" />
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 0.03 --clock $(find midterm_competition3)/config/sdc_localization_3.bag" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+  
+</launch>

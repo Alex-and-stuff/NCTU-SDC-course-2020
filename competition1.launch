@@ -1,0 +1,10 @@
+<launch>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find midterm_competition1)/config/competition1.rviz"/>
+
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 0.03 --clock $(find midterm_competition1)/config/sdc_localization_1.bag"/>
+  
+  <param name="file" type="str" value="/home/alex/catkin_ws/src/midterm_competition1/src/itri_map.pcd" />
+  <node name="competition1" pkg="midterm_competition1" type="competition1" output="screen"/>
+
+</launch>
